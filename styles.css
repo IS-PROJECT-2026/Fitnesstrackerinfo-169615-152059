@@ -1,0 +1,135 @@
+ :root {
+     --ink: #0E1A2B;
+     --ink-soft: #1D2E45;
+     --paper: #F5F7FA;
+     --paper-alt: #EAEFF5;
+     --white: #FFFFFF;
+     --rule: #D3DCE7;
+     --muted: #5C6E85;
+     --ppg: #00B865;
+     --warn: #C4451F;
+     --warn-bg: #FBF1EE;
+
+     --display: "Space Grotesk", system-ui, sans-serif;
+     --body: "Newsreader", Georgia, serif;
+     --mono: "JetBrains Mono", ui-monospace, monospace;
+
+     --wrap: 1120px;
+ }
+
+ /* ---------- reset ---------- */
+ *,
+ *::before,
+ *::after {
+     box-sizing: border-box;
+ }
+
+ html {
+     scroll-behavior: smooth;
+     /*-webkit-text-size-adjust: 100%;*/
+ }
+
+ body {
+     margin: 0;
+     background: var(--paper);
+     color: var(--ink);
+     font-family: var(--body);
+     font-size: 1.0625rem;
+     line-height: 1.7;
+     font-weight: 300;
+ }
+
+ h1,
+ h2,
+ h3 {
+     font-family: var(--display);
+     font-weight: 700;
+     line-height: 1.15;
+     margin: 0;
+ }
+
+ p {
+     margin: 0 0 1rem;
+ }
+
+ ul,
+ ol {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+
+ .mono {
+     font-family: var(--mono);
+     font-size: 0.72rem;
+     letter-spacing: 0.04em;
+     text-transform: uppercase;
+ }
+
+ .wrap {
+     width: min(100% - 3rem, var(--wrap));
+     margin-inline: auto;
+ }
+
+ .skip {
+     position: absolute;
+     left: -9999px;
+     background: var(--ink);
+     color: var(--white);
+     padding: 0.7rem 1.1rem;
+     z-index: 100;
+     font-family: var(--display);
+ }
+
+ .skip:focus {
+     left: 1rem;
+     top: 1rem;
+ }
+
+ :focus-visible {
+     outline: 3px solid var(--ppg);
+     outline-offset: 3px;
+ }
+
+ /* ---------- section scaffolding ---------- */
+ .band {
+     padding: 4.5rem 0;
+     border-bottom: 1px solid var(--rule);
+ }
+
+ .band--alt {
+     background: var(--paper-alt);
+ }
+
+ .band--risk {
+     background: var(--warn-bg);
+ }
+
+ .sec-head {
+     max-width: 62ch;
+     margin-bottom: 2.8rem;
+ }
+
+ .sec-num {
+     display: block;
+     color: var(--ppg);
+     margin-bottom: 0.6rem;
+     font-size: 0.78rem;
+     letter-spacing: 0.16em;
+ }
+
+ .band--risk .sec-num {
+     color: var(--warn);
+ }
+
+ .sec-head h2 {
+     font-size: clamp(1.6rem, 2.9vw, 2.2rem);
+     letter-spacing: -0.025em;
+     margin-bottom: 0.9rem;
+ }
+
+ .sec-head p {
+     color: var(--muted);
+     font-size: 1.06rem;
+     margin: 0;
+ }
