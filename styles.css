@@ -522,7 +522,30 @@
   }
 
    /* ---------- 07 RISKS AND LIMITATIONS (MONA)--------- */
+/* ---------- 05 risks ---------- */
+.risks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.5rem;
+}
 
+.risk {
+    background: var(--white);
+    border: 1px solid #EDD9D2;
+    border-left: 3px solid var(--warn);
+    padding: 1.4rem 1.5rem;
+}
+
+.risk h3 {
+    font-size: 1.03rem;
+    margin-bottom: 0.55rem;
+}
+
+.risk p {
+    margin: 0;
+    font-size: 0.97rem;
+    color: var(--ink-soft);
+}
 
  /* ---------- 08 steps ---------- */
  .steps {
