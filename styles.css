@@ -451,3 +451,41 @@
      font-size: 0.97rem;
      color: var(--ink-soft);
  }
+  /* ---------- 05 ACCURACY (MONA) ---------- */
+
+   /* ---------- 07 RISKS AND LIMITATIONS (MONA)--------- */
+
+
+ /* ---------- 08 steps ---------- */
+ .steps {
+     counter-reset: step;
+     display: grid;
+     gap: 1.6rem;
+     max-width: 78ch;
+ }
+
+ .steps li {
+     counter-increment: step;
+     display: grid;
+     grid-template-columns: 46px 1fr;
+     gap: 1.2rem;
+ }
+
+ .steps li::before {
+     content: counter(step, decimal-leading-zero);
+     font-family: var(--mono);
+     font-size: 0.82rem;
+     color: var(--ppg);
+     padding-top: 0.28rem;
+ }
+
+ .steps h3 {
+     font-size: 1.03rem;
+     margin-bottom: 0.35rem;
+ }
+
+ .steps p {
+     margin: 0;
+     font-size: 0.97rem;
+     color: var(--ink-soft);
+ }
