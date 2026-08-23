@@ -212,3 +212,161 @@
      font-size: 1.06rem;
      margin: 0;
  }
+ /* ---------- hero ---------- */
+ .hero {
+     padding: 4.5rem 0 4rem;
+     border-bottom: 1px solid var(--rule);
+ }
+
+ .hero__grid {
+     display: grid;
+     grid-template-columns: 1.15fr 1fr;
+     gap: 3.5rem;
+     align-items: center;
+ }
+
+ .eyebrow {
+     font-family: var(--mono);
+     font-size: 0.7rem;
+     letter-spacing: 0.14em;
+     text-transform: uppercase;
+     color: var(--ppg);
+     margin-bottom: 1.1rem;
+ }
+
+ .hero h1 {
+     font-size: clamp(2rem, 4.1vw, 3.15rem);
+     letter-spacing: -0.03em;
+     margin-bottom: 1.4rem;
+     text-wrap: balance;
+ }
+
+ .lede {
+     font-size: 1.14rem;
+     color: var(--ink-soft);
+     max-width: 46ch;
+     margin-bottom: 1.9rem;
+ }
+
+ .hero__actions {
+     display: flex;
+     gap: 0.8rem;
+     flex-wrap: wrap;
+ }
+
+ .btn {
+     font-family: var(--display);
+     font-size: 0.87rem;
+     font-weight: 500;
+     padding: 0.72rem 1.35rem;
+     text-decoration: none;
+     border-radius: 2px;
+     border: 1.5px solid var(--ink);
+     transition: transform .15s, background .18s, color .18s;
+     display: inline-block;
+ }
+
+ .btn--primary {
+     background: var(--ink);
+     color: var(--paper);
+ }
+
+ .btn--primary:hover {
+     background: var(--ink-soft);
+     transform: translateY(-2px);
+ }
+
+ .btn--ghost {
+     background: transparent;
+     color: var(--ink);
+ }
+
+ .btn--ghost:hover {
+     background: var(--ink);
+     color: var(--paper);
+     transform: translateY(-2px);
+ }
+
+ /* ---------- PPG trace ---------- */
+ .ppg {
+     margin: 0;
+ }
+
+ .ppg__frame {
+     position: relative;
+     background: var(--ink);
+     border-radius: 3px;
+     padding: 1.6rem 1.2rem;
+     overflow: hidden;
+ }
+
+ .ppg__frame svg {
+     display: block;
+     width: 100%;
+     height: auto;
+ }
+
+ .ppg__grid line {
+     stroke: rgba(255, 255, 255, 0.08);
+     stroke-width: 1;
+ }
+
+ .ppg__base {
+     stroke: var(--ppg);
+     stroke-width: 2;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+     opacity: 0.28;
+ }
+
+ .ppg__trace {
+     stroke: var(--ppg);
+     stroke-width: 2.6;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+     stroke-dasharray: 90 1400;
+     stroke-dashoffset: 1490;
+     animation: sweep 3.6s linear infinite;
+     filter: drop-shadow(0 0 7px rgba(0, 184, 101, 0.75));
+ }
+
+ @keyframes sweep {
+     to {
+         stroke-dashoffset: 0;
+     }
+ }
+
+ .ppg__dot {
+     position: absolute;
+     right: 1.2rem;
+     top: 1.2rem;
+     width: 6px;
+     height: 6px;
+     border-radius: 50%;
+     background: var(--ppg);
+     box-shadow: 0 0 0 0 rgba(0, 184, 101, 0.6);
+     animation: ping 1.8s ease-out infinite;
+ }
+
+ @keyframes ping {
+     0% {
+         box-shadow: 0 0 0 0 rgba(0, 184, 101, 0.55);
+     }
+
+     100% {
+         box-shadow: 0 0 0 14px rgba(0, 184, 101, 0);
+     }
+ }
+
+ .ppg figcaption {
+     font-size: 0.92rem;
+     color: var(--muted);
+     margin-top: 0.9rem;
+     line-height: 1.55;
+ }
+
+ .ppg figcaption .mono {
+     display: block;
+     color: var(--ink);
+     margin-bottom: 0.3rem;
+ }
