@@ -370,3 +370,62 @@
      color: var(--ink);
      margin-bottom: 0.3rem;
  }
+ /* ---------- 01 sensors ---------- */
+ .sensors {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+     gap: 1px;
+     background: var(--rule);
+     border: 1px solid var(--rule);
+ }
+
+ .sensor {
+     background: var(--paper);
+     padding: 1.6rem 1.4rem;
+     transition: background .2s;
+ }
+
+ .sensor:hover {
+     background: var(--white);
+ }
+
+ .sensor h3 {
+     font-size: 1.02rem;
+     margin-bottom: 0.45rem;
+     letter-spacing: -0.01em;
+ }
+
+ .sensor__what {
+     color: var(--ppg);
+     margin-bottom: 0.75rem;
+ }
+
+ .sensor p:last-child {
+     margin: 0;
+     font-size: 0.97rem;
+     color: var(--ink-soft);
+ }
+
+ .callout {
+     margin-top: 2.2rem;
+     padding: 1.5rem 1.7rem;
+     background: var(--ink);
+     color: #DDE6EE;
+     border-radius: 3px;
+ }
+
+ .callout p {
+     margin: 0;
+     font-size: 1.03rem;
+ }
+
+ .callout strong {
+     color: var(--ppg);
+     font-family: var(--display);
+     font-weight: 500;
+ }
+
+ .callout em {
+     color: var(--white);
+     font-style: italic;
+ }
