@@ -429,3 +429,25 @@
      color: var(--white);
      font-style: italic;
  }
+ /* ---------- 03 advantages ---------- */
+ .cols {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+     gap: 2rem 2.4rem;
+ }
+
+ .col {
+     border-top: 2px solid var(--ppg);
+     padding-top: 1rem;
+ }
+
+ .col h3 {
+     font-size: 1.03rem;
+     margin-bottom: 0.5rem;
+ }
+
+ .col p {
+     margin: 0;
+     font-size: 0.97rem;
+     color: var(--ink-soft);
+ }
