@@ -580,3 +580,71 @@
      font-size: 0.97rem;
      color: var(--ink-soft);
  }
+/* ---------- 02 categories ---------- */
+.cats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap:
+        1.4rem;
+}
+
+.cat {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-top: 3px solid var(--ink);
+    padding: 1.6rem 1.4rem;
+}
+
+.cat h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.cat__eg {
+    color: var(--muted);
+    margin-bottom: 0.9rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.cat>p:nth-of-type(2) {
+    font-size: 0.97rem;
+    color: var(--ink-soft);
+}
+
+.cat ul {
+    border-top: 1px solid var(--rule);
+    padding-top: 0.8rem;
+}
+
+.cat li {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.35rem;
+    display: flex;
+    gap:
+        0.6rem;
+}
+
+.cat li .mono {
+    color: var(--ppg);
+    flex: none;
+    font-size: 0.85rem;
+}
+
+.cat li:last-child .mono {
+    color: var(--warn);
+}
+
+.note {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.note .mono {
+    color: var(--ink);
+    margin-right: 0.5rem;
+}
